@@ -1,11 +1,11 @@
 import { useContext } from "react";
 import { HiMoon, HiOutlineMoon } from "react-icons/hi";
 import { Link } from "react-router-dom";
-import { ThemeContext } from "src/context/themeContext";
+import { changeModeContext } from "src/context/changeModeContext";
 import "./style.scss";
 
 const NavBar = () => {
-    const { theme, toggleMode } = useContext(ThemeContext);
+    const { theme, toggleMode } = useContext(changeModeContext);
 
     return (
         <header className={theme === "dark" ? "header header--dark" : "header"}>
