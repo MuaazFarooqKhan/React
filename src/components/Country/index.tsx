@@ -8,7 +8,6 @@ import CountriesList from "./CountriesList";
 import "./style.scss";
 
 const Country = () => {
-  debugger
   const { theme } = useContext(changeModeContext);
 
   // Get URL params

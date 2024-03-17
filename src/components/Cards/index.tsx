@@ -4,7 +4,6 @@ import Card from "./Card";
 import "./style.scss";
 
 const Cards = () => {
-debugger
   // will use get data from json file
   const { data, isLoading, isError, searchedCountry, filteredRegion } =
     useContext(CountriesContext);

@@ -11,7 +11,7 @@ import "./style.scss";
 const App = () => {
   // will use for mode change
   const { theme } = useContext(changeModeContext);
-debugger
+
   return (
     <div className={theme === "dark" ? "app app--dark" : "app"}>
       <NavBar />
