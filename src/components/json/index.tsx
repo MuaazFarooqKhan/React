@@ -1,16 +1,18 @@
+// read data from json
 const response = await fetch('src/data.json');
 const data = await response.json();
-export const loadData = async () => {
+// will display all the countries
+export const loadData = () => {
   return data;
 };
-
-export const getCountryData = async (url: string) => {
+// will get clicked country data
+export const getCountryData = (url: string) => {
   var singleCountryData = data.find((country:any) => country.alpha2Code === url);
   return singleCountryData;
 };
-
-export const getBorders = async (url: string) => {
-  var a = data.filter((country:any) => url.includes(country.alpha2Code));
-  return a;
+// will give all the country name whose border are touch with the clicked country
+export const getBorders = (url: string) => {
+  var borders = data.filter((country:any) => url.includes(country.alpha2Code));
+  return borders;
 };
 

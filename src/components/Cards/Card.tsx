@@ -11,6 +11,7 @@ const Card = ({
   capital,
   alpha2Code,
 }: Country) => {
+    // will use for mode change
   const { theme } = useContext(changeModeContext);
 
   return (

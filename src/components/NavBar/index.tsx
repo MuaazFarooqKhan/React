@@ -4,6 +4,7 @@ import { changeModeContext } from "src/context/changeModeContext";
 import "./style.scss";
 
 const NavBar = () => {
+      // will use for mode change
     const { theme, toggleMode } = useContext(changeModeContext);
 
     return (

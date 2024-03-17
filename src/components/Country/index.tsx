@@ -8,11 +8,13 @@ import CountriesList from "./CountriesList";
 import "./style.scss";
 
 const Country = () => {
+  debugger
   const { theme } = useContext(changeModeContext);
 
   // Get URL params
   const { code } = useParams<"code">();
 
+  // will get data for a specific country data
   const { isLoading, isError, data } = useQuery<Countries>(
     "countryInfos",
     () => getCountryData(`${code}`),
@@ -20,6 +22,7 @@ const Country = () => {
 
   const bordersCountry: string = data?.borders?.toString() || "";
 
+  // will get all country names
   const {
     isLoading: loading,
     data: borders,
@@ -41,7 +44,6 @@ const Country = () => {
       />
     );
   });
-debugger
   return (
     <div className="country">
       <Link to="/">

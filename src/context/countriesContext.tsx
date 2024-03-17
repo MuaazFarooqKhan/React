@@ -23,15 +23,19 @@ export const CountriesContextProvider = ({
   const [searchedCountry, setSearchedCountry] = useState("");
   const [filteredRegion, setFilteredRegion] = useState("");
 
+  // will get data from the json
   const { isLoading, isError, data } = useQuery<Countries[]>(
     "countriesInfos",
     () => loadData(),
   );
 
+  // will use for search input
+
   const getSearchedCountry = (value: string): void => {
     setSearchedCountry(value);
   };
 
+  // will use for get data on region based
   const getFilteredRegion = (value: string): void => {
     if (value !== "All") {
       setFilteredRegion(value);

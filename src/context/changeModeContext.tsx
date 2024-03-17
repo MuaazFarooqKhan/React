@@ -12,8 +12,12 @@ const defaultState = {
 
 export const changeModeContext = createContext<CountriesChangeModeContext>(defaultState);
 
+// will use in main file
+
 export const ChangeModeContextProvider = ({ children }: { children: ReactNode }) => {
   const [theme, setTheme] = useState("light");
+
+  // Change mode on click
 
   const toggleMode = () => {
     if (theme === "light") {
@@ -25,6 +29,7 @@ export const ChangeModeContextProvider = ({ children }: { children: ReactNode })
     }
   };
 
+  // local storage
   useEffect(() => {
     const value = localStorage.getItem("theme");
     if (localStorage && typeof value === "string") {

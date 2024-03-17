@@ -7,16 +7,20 @@ import { changeModeContext } from "src/context/changeModeContext";
 import "./style.scss";
 
 const Filter = () => {
+  // give specific region
   const { getFilteredRegion } = useContext(CountriesContext);
+    // will use for mode change
   const { theme } = useContext(changeModeContext);
 
   const [dialogOpen, setDialogOpen] = useState(false);
   const [region, setRegion] = useState("");
 
+  // close and open dialogbox of region
   const handleOnClick = () => {
     setDialogOpen(!dialogOpen);
   };
 
+  // change value of region
   const handleOnClickRegion = (event: React.MouseEvent) => {
     const regionString = event.target as HTMLLIElement;
     getFilteredRegion(regionString.id);
