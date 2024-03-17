@@ -5,12 +5,12 @@ export const loadData = async () => {
 };
 
 export const getCountryData = async (url: string) => {
-  var singleCountryData = data.find((country:any) => country.alpha3Code === url);
+  var singleCountryData = data.find((country:any) => country.alpha2Code === url);
   return singleCountryData;
 };
 
 export const getBorders = async (url: string) => {
-  var a = data.filter((country:any) => url.includes(country.alpha3Code));
+  var a = data.filter((country:any) => url.includes(country.alpha2Code));
   return a;
 };
 

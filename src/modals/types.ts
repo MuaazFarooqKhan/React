@@ -1,6 +1,6 @@
 export interface Countries {
   name: string;
-  alpha3Code: string;
+  alpha2Code: string;
   topLevelDomain: string[];
   capital: string;
   subregion: string;
@@ -38,3 +38,18 @@ export interface Languages {
   name: string;
   nativeName: string;
 }
+
+export interface Border {
+  borderCode: string;
+  borderName: string;
+}
+
+export interface Country {
+  name: Countries["name"];
+  flags: Countries["flags"];
+  population: Countries["population"];
+  region: Countries["region"];
+  capital: Countries["capital"];
+  alpha2Code: Countries["alpha2Code"];
+}
+

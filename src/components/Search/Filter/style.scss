@@ -1,21 +1,21 @@
-@use "../../../styles/vars" as v;
-@use "../../../styles/mixins" as m;
+@use "../../../commonStyle/vars" as vars;
+@use "../../../commonStyle/mixins" as mixins;
 
 .filter {
-  background-color: v.$light-mode-elements;
+  background-color: vars.$light-mode-elements;
   position: relative;
   height: 50px;
   width: 190px;
   padding: 20px;
-  font-size: v.$font-size-text;
-  font-weight: v.$font-weight-normal;
+  font-size: vars.$font-size-text;
+  font-weight: vars.$font-weight-normal;
   border-radius: 4px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   transition: background-color ease-in-out 1s;
   &--dark {
-    background-color: v.$dark-mode-elements;
+    background-color: vars.$dark-mode-elements;
   }
-  @include m.breakpoint(mobile) {
+  @include mixins.breakpoint(mobile) {
     margin-top: 40px;
   }
   &__icon {
@@ -25,14 +25,14 @@
     cursor: pointer;
   }
   &--dark + div {
-    background-color: v.$dark-mode-elements;
+    background-color: vars.$dark-mode-elements;
   }
   &__select {
     position: absolute;
     z-index: 5;
     width: 190px;
     margin-top: 3px;
-    background-color: v.$light-mode-elements;
+    background-color: vars.$light-mode-elements;
     padding: 15px 20px;
     border-radius: 4px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -41,8 +41,8 @@
       display: none;
     }
     &--region {
-      font-size: v.$font-size-text;
-      font-weight: v.$font-weight-normal;
+      font-size: vars.$font-size-text;
+      font-weight: vars.$font-weight-normal;
       &:not(:first-child) {
         margin-top: 15px;
       }

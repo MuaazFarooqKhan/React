@@ -1,5 +1,5 @@
-@use "../../styles/vars" as v;
-@use "../../styles/mixins" as m;
+@use "../../commonStyle/vars" as vars;
+@use "../../commonStyle/mixins" as mixins;
 
 .header {
   display: flex;
@@ -7,13 +7,13 @@
   justify-content: space-between;
   height: 60px;
   padding: 20px 60px;
-  background-color: v.$light-mode-elements;
+  background-color: vars.$light-mode-elements;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   transition: background-color ease-in-out 1s;
   &--dark {
-    background-color: v.$dark-mode-elements;
+    background-color: vars.$dark-mode-elements;
   }
-  @include m.breakpoint(mobile) {
+  @include mixins.breakpoint(mobile) {
     width: 100%;
     height: 80px;
     padding: 20px;
@@ -21,9 +21,9 @@
   }
   &__title {
     font-size: 18px;
-    font-weight: v.$font-weight-extra-bold;
-    @include m.breakpoint(mobile) {
-      font-size: v.$font-size-text;
+    font-weight: vars.$font-weight-extra-bold;
+    @include mixins.breakpoint(mobile) {
+      font-size: vars.$font-size-text;
     }
   }
   &__mode {
@@ -32,17 +32,17 @@
   }
   &__button {
     border: none;
-    color: v.$light-mode-text;
+    color: vars.$light-mode-text;
     background: transparent;
-    font-size: v.$font-size-text;
-    font-weight: v.$font-weight-bold;
+    font-size: vars.$font-size-text;
+    font-weight: vars.$font-weight-bold;
     font-family: "Nunito Sans", sans-serif;
     &--dark {
-      color: v.$dark-mode-text;
+      color: vars.$dark-mode-text;
     }
-    @include m.breakpoint(mobile) {
+    @include mixins.breakpoint(mobile) {
       font-size: 12px;
-      font-weight: v.$font-weight-bold;
+      font-weight: vars.$font-weight-bold;
     }
   }
 }
